@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { SelectUserModel } from "@/drizzle/zod-schema/user";
 
 type Props = {
-	data?: any;
+	data?: Pick<SelectUserModel, "id" | "fullName">;
 	href?: string;
 };
 export function UserAvatar({ data, ...props }: Props) {
